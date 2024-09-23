@@ -1,0 +1,186 @@
+/* General styling */
+.productDetail {
+  font-family: "Roboto", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 30px;
+  padding: 30px;
+  animation: fadeIn 1s ease-in-out;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 80vh;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  align-items: center;
+}
+
+/* Product image container for movement */
+.product_image_container {
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+  border-radius: 8px;
+}
+
+/* Product image styling with zoom effect */
+.product_image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.product_image:hover {
+  transform: scale(1.05);
+}
+
+/* Zoom lens styling */
+.zoomLens {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  width: 100px; /* Adjust size as needed */
+  height: 100px; /* Adjust size as needed */
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden; /* Initially hidden */
+}
+
+/* Product info section */
+.product_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  max-width: 100%;
+}
+
+.product_info h2 {
+  margin: 0;
+  color: #222;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+/* Price, Color, Category styling */
+.price,
+.color,
+.category {
+  font-size: 18px;
+  color: green;
+}
+
+/* Selector styling */
+.selector {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.selectorLabel {
+  font-weight: 500;
+  color: #be1b1b;
+  font-size: 20px;
+}
+
+.selector p {
+  margin: 0;
+  font-size: 18px;
+}
+
+/* Action buttons section */
+.product_actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Button styles */
+.buyNowButton,
+.addToCartButton,
+.backButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buyNowButton {
+  background-color: #026407;
+}
+
+.buyNowButton:hover {
+  background-color: #ff4c4c;
+  transform: scale(1.05);
+}
+
+.addToCartButton {
+  background-color: #d32f2f;
+}
+
+.addToCartButton:hover {
+  background-color: #c62828;
+  transform: scale(1.05);
+}
+
+.backButton {
+  background-color: #9e9e9e;
+}
+
+.backButton:hover {
+  background-color: #757575;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .productDetail {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .product_image {
+    height: auto;
+  }
+
+  .product_info h2 {
+    font-size: 32px;
+  }
+
+  .selectorLabel {
+    font-size: 18px;
+  }
+
+  .price,
+  .selector p {
+    font-size: 16px;
+  }
+
+  .product_actions {
+    flex-direction: column;
+  }
+}

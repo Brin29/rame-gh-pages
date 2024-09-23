@@ -1,0 +1,329 @@
+/* General styling */
+.profile-container {
+  display: flex; /* Utiliza flexbox para organizar el contenido en un contenedor flexible */
+  font-family: "Roboto", sans-serif; /* Define la fuente de texto como Roboto */
+  margin: 20px; /* Añade un margen de 20px alrededor del contenedor principal */
+}
+
+.sidebar {
+  width: 25%; /* Establece el ancho de la barra lateral como el 25% del contenedor principal */
+  background-color: #f0f0f0; /* Define el color de fondo de la barra lateral */
+  padding: 20px; /* Añade un relleno interno de 20px en la barra lateral */
+  display: flex; /* Utiliza flexbox para organizar los elementos dentro de la barra lateral */
+  flex-direction: column; /* Organiza los elementos en una columna vertical */
+  gap: 10px; /* Añade un espacio de 10px entre los botones */
+}
+
+.sidebar button {
+  width: 100%; /* Hace que los botones ocupen todo el ancho disponible en la barra lateral */
+  background-color: #fff; /* Define el color de fondo de los botones */
+  border: 1px solid #ccc; /* Añade un borde gris claro a los botones */
+  padding: 10px; /* Añade un relleno interno de 10px en los botones */
+  font-size: 16px; /* Define el tamaño de fuente de los botones */
+  color: black; /* Define el color del texto en los botones */
+  cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+  border-radius: 5px; /* Añade bordes redondeados a los botones */
+  text-align: left; /* Alinea el texto del botón a la izquierda */
+}
+
+.sidebar button:hover {
+  background-color: #e0e0e0; /* Cambia el color de fondo del botón al pasar el mouse */
+}
+
+.content {
+  width: 75%; /* Establece el ancho del área de contenido como el 75% del contenedor principal */
+  padding: 20px; /* Añade un relleno interno de 20px en el área de contenido */
+  position: relative; /* Establece la posición relativa para permitir el posicionamiento absoluto dentro del contenido */
+}
+
+.avatar-container {
+  display: flex; /* Utiliza flexbox para organizar los elementos dentro del contenedor de avatares */
+  flex-direction: column; /* Organiza los elementos en una columna vertical */
+  align-items: center; /* Alinea los elementos al centro horizontalmente */
+  margin-bottom: 20px; /* Añade un margen inferior de 20px */
+  position: relative; /* Posiciona el contenedor de avatares relativamente para contener el popup de selección */
+}
+
+.avatar-section {
+  display: flex; /* Utiliza flexbox para organizar los elementos dentro de la sección de avatares */
+  flex-direction: column; /* Organiza los elementos en una columna vertical */
+  align-items: center; /* Alinea los elementos al centro horizontalmente */
+}
+
+.avatar {
+  width: 100px; /* Define el ancho del avatar como 100px */
+  height: 100px; /* Define la altura del avatar como 100px */
+  border-radius: 50%; /* Redondea el avatar en forma de círculo */
+  cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el avatar */
+  margin-bottom: 10px; /* Añade un margen inferior de 10px */
+  object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsionar */
+}
+
+.username {
+  font-size: 22px; /* Define el tamaño de fuente del nombre de usuario como 22px */
+  font-weight: bold; /* Establece el texto en negrita */
+}
+
+.greeting {
+  font-size: 18px; /* Define el tamaño de fuente del saludo como 18px */
+  font-weight: normal; /* Establece el texto en peso normal */
+  color: #555; /* Define el color del texto del saludo como un gris oscuro */
+}
+
+.avatar-gallery {
+  display: flex; /* Utiliza flexbox para organizar los avatares en la galería */
+  flex-direction: column; /* Organiza los avatares en una columna vertical */
+  align-items: center; /* Alinea los avatares al centro horizontalmente */
+  background-color: #fff; /* Define el color de fondo de la galería de avatares */
+  border: 1px solid #ccc; /* Añade un borde gris claro a la galería de avatares */
+  padding: 10px; /* Añade un relleno interno de 10px en la galería de avatares */
+  border-radius: 5px; /* Añade bordes redondeados a la galería de avatares */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil alrededor de la galería */
+  position: absolute; /* Posiciona la galería de avatares sobre otros elementos */
+  top: 120%; /* Posiciona la galería 120% por debajo del avatar principal */
+  left: 50%; /* Centra horizontalmente la galería */
+  transform: translateX(
+    -50%
+  ); /* Ajusta la posición horizontal para centrar la galería */
+  z-index: 10; /* Asegura que la galería esté encima de otros elementos */
+}
+
+.avatar-gallery img {
+  width: 60px; /* Define el ancho de los avatares en la galería como 60px */
+  height: 60px; /* Define la altura de los avatares en la galería como 60px */
+  border-radius: 50%; /* Redondea las imágenes en forma de círculo */
+  margin: 5px; /* Añade un margen de 5px entre las imágenes */
+  cursor: pointer; /* Cambia el cursor a una mano al pasar sobre las miniaturas de los avatares */
+  object-fit: cover; /* Ajusta las miniaturas para cubrir el contenedor sin distorsionar */
+}
+
+h1 {
+  font-size: 22px; /* Define el tamaño de fuente de los encabezados h1 como 22px */
+  font-weight: bold; /* Establece el texto en negrita */
+}
+
+.required {
+  color: red; /* Define el color del texto para los campos obligatorios como rojo */
+}
+
+.form-group {
+  margin-bottom: 20px; /* Añade un margen inferior de 20px entre los grupos de campos de formulario */
+}
+
+label {
+  display: block; /* Hace que las etiquetas se comporten como bloques para que ocupen toda la línea */
+  font-size: 14px; /* Define el tamaño de fuente de las etiquetas como 14px */
+  margin-bottom: 5px; /* Añade un margen inferior de 5px a las etiquetas */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+  width: 100%; /* Hace que los campos de entrada ocupen el 100% del contenedor disponible */
+  padding: 10px; /* Añade un relleno interno de 10px en los campos de entrada */
+  border: 1px solid #ccc; /* Añade un borde gris claro a los campos de entrada */
+  border-radius: 5px; /* Añade bordes redondeados a los campos de entrada */
+  font-size: 16px; /* Define el tamaño de fuente de los campos de entrada como 16px */
+}
+
+input[type="radio"] {
+  margin-right: 5px; /* Añade un margen derecho de 5px a los botones de radio */
+}
+
+.save-button {
+  background-color: black; /* Define el color de fondo del botón de guardar como negro */
+  color: white; /* Define el color del texto del botón de guardar como blanco */
+  padding: 10px 20px; /* Añade un relleno interno de 10px arriba y abajo, y 20px a los lados */
+  border: none; /* Elimina el borde predeterminado del botón */
+  cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+  font-size: 16px; /* Define el tamaño de fuente del botón de guardar como 16px */
+  border-radius: 5px; /* Añade bordes redondeados al botón */
+}
+
+.save-button:hover {
+  background-color: #333; /* Cambia el color de fondo del botón al pasar el mouse */
+}
+
+.back-link {
+  display: block; /* Hace que el enlace de volver se comporte como un bloque para ocupar toda la línea */
+  margin-top: 20px; /* Añade un margen superior de 20px */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  color: black; /* Define el color del texto del enlace como negro */
+  font-size: 16px; /* Define el tamaño de fuente del enlace como 16px */
+}
+
+.back-link:hover {
+  text-decoration: underline; /* Añade un subrayado al enlace al pasar el mouse */
+}
+
+/* Contenedor de contraseña */
+.password-container {
+  display: flex; /* Utiliza flexbox para organizar los elementos dentro del contenedor de contraseña */
+  align-items: center; /* Alinea los elementos verticalmente al centro */
+}
+
+.password-container input {
+  flex: 1; /* Permite que el campo de entrada se expanda para llenar el espacio disponible */
+  /* margin-right: 10px; Añade un margen derecho de 10px */
+}
+
+.password-toggle {
+  background: none; /* Elimina el fondo del botón de alternar contraseña */
+  border: none; /* Elimina el borde del botón de alternar contraseña */
+  cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón de alternar contraseña */
+  color: #0d0d0e; /* Define el color del texto del botón de alternar contraseña como azul */
+  font-size: 14px; /* Define el tamaño de fuente del botón de alternar contraseña como 14px */
+}
+
+.password-toggle:hover {
+  text-decoration: underline; /* Añade un subrayado al botón de alternar contraseña al pasar el mouse */
+}
+
+/* Contenedor de contraseña (duplicado) */
+.password-container {
+  position: relative; /* Posiciona el contenedor de contraseña relativamente para permitir posicionamiento absoluto dentro de él */
+  display: flex; /* Utiliza flexbox para organizar los elementos dentro del contenedor de contraseña */
+  align-items: center; /* Alinea los elementos verticalmente al centro */
+}
+
+.password-container input {
+  padding-right: 30px; /* Añade espacio adicional a la derecha para el ícono dentro del campo de entrada */
+  flex: 1; /* Permite que el campo de entrada se expanda para llenar el espacio disponible */
+}
+
+.password-icon {
+  position: absolute; /* Posiciona el ícono de la contraseña de manera absoluta dentro del contenedor de contraseña */
+  right: 15px; /* Ajusta la posición del ícono a 10px desde el borde derecho del campo de entrada */
+  cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el ícono */
+  color: #030303; /* Define el color del ícono como azul */
+  font-size: 18px; /* Define el tamaño de fuente del ícono como 18px */
+}
+
+.password-icon:hover {
+  color: #0056b3; /* Cambia el color del ícono al pasar el mouse */
+}
+
+
+
+
+/*seccion para dirreciones */
+.direcciones-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+.direccion-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.add-button, .save-button, .cancel-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 5px;
+}
+
+.save-button {
+  background-color: #28a745;
+}
+
+.cancel-button {
+  background-color: #dc3545;
+}
+
+.add-button:hover, .save-button:hover, .cancel-button:hover {
+  opacity: 0.8;
+}
+
+.direccion-lista {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+}
+
+.direccion-item {
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 1%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+
+.direccion-item p {
+  margin: 5px 0;
+}
+
+.sin-direcciones {
+  font-size: 14px;
+  color: #999;
+}
+
+.editar-button {
+  background-color: #1aa861;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px;
+}
+
+.eliminar-button {
+  background-color: #1aa861; 
+  color: white; 
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px;
+  
+}
+
+.editar-button:hover {
+  background-color: #8b8b89; /* Color más oscuro al pasar el mouse */
+}
+
+.eliminar-button:hover {
+  background-color: #8b898a; /* Color más oscuro al pasar el mouse */
+}

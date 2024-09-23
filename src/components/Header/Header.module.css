@@ -1,0 +1,78 @@
+.App_header {
+  position: static;
+  width: 100%;
+  height: 12vh;
+  top: 0;
+  display: flex;
+  background-color: #de8ca2;
+  color: #ffffff;
+  font-size: 18px;
+  z-index: 100;
+}
+
+/*  contenedor de todo el encabezado  */
+.container_header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.container_icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+/*  logo  */
+.img_tittle {
+  width: 190px;
+  height: 30%;
+  border-radius: 50%;
+}
+
+/*  imagen inicio de sesion  */
+.links > ul {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  list-style-type: none;
+  margin-right: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.links {
+  margin: 2rem 1.5rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+.links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.3rem;
+  position: relative;
+}
+.links a:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  /*animacion de derecha a izquierda*/
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+}
+.links a:hover:after {
+  /*animacion de derecha a izquierda*/
+  transform-origin: left;
+  transform: scaleX(1);
+}

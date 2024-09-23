@@ -1,0 +1,425 @@
+.App_body {
+  font-family: "Roboto", sans-serif;
+  text-align: justify;
+  margin: 0;
+  margin-top: 5px;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+/*Menù lateral*/
+#btn__menu {
+  display: none;
+}
+
+.btn__menu {
+  font-size: 28px;
+  margin-left: 0.1em;
+}
+
+.container__menu {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transition: all 500ms ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#btn__menu:checked ~ .container__menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cont__menu {
+  width: 100%;
+  max-width: 250px;
+  background-color: #7c7a7a;
+  height: 100vh;
+  position: relative;
+  transition: all 500ms ease;
+  transform: translateX(-100%);
+}
+
+#btn__menu:checked ~ .container__menu .cont__menu {
+  transform: translateX(0%);
+}
+
+.cont__menu nav {
+  transform: translateY(15%);
+}
+
+.cont__menu nav a {
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+  color: #ffffff;
+  border-left: 5px solid transparent;
+  transition: all 400ms ease;
+}
+
+.cont__menu nav a:hover {
+  border-left: 5px solid #000000;
+  background: #1f1f1f;
+}
+
+.cont__menu label {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/*Fin de Menù lateral*/
+
+/* organizador general de las secciones  */
+section {
+  padding: 1em;
+  margin: 0 auto;
+}
+
+/*  primera seccion  */
+.App__section__first {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 1em;
+  margin-left: 12em;
+  margin-right: 12em;
+  display: flex;
+}
+
+/* Carrusel */
+.carr {
+  width: 600px;
+  height: auto;
+  margin: 50px auto 0;
+  overflow: hidden;
+}
+
+.carr ul {
+  display: flex;
+  padding: 0;
+  width: 300%;
+  animation: slide 15s infinite;
+}
+
+.carr li {
+  width: 100%;
+  list-style: none;
+}
+
+.carr img {
+  width: 100%;
+  max-height: 500px; /* Cambiar la altura máxima aquí */
+  object-fit: cover; /* Ajusta la imagen para que llene el contenedor sin deformarse */
+  display: block;
+}
+@keyframes slide {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0;
+  }
+
+  25% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -100%;
+  }
+
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+
+  100% {
+    margin-left: 0;
+  } /* Retorna al inicio */
+}
+
+/* h2 */
+.title__section {
+  margin-top: 1em;
+  text-align: center;
+}
+
+/*  segunda seccion  */
+.App__section__second {
+  background-color: #f5b561bd;
+  display: flex;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 1em;
+  margin-left: 9em;
+  margin-right: 9em;
+  border-radius: 0.5em 0.5em 0.5em 0.5em;
+}
+
+/*  estructura del la section  */
+.container__section {
+  margin-left: 3em;
+  margin-top: 1em;
+  margin-right: 10em;
+  display: flex;
+  /* max-width: 424px; */
+  width: 20em;
+  height: 20em;
+}
+
+/*  div texto informacion  */
+.info_mes {
+  text-align: center;
+  margin-left: 3em;
+  margin-top: 3.5em;
+  font-size: 24px;
+}
+
+/* btn__1 */
+.btn__1 {
+  position: absolute;
+  margin-top: 9em;
+  margin-left: 21.5em;
+  scale: 0.8;
+  display: flex;
+  justify-content: center;
+  --color-text: #ffffff;
+  --color-background: #8f44fd;
+  --color-outline: #ff145b80;
+  --color-shadow: #00000080;
+}
+
+.btn__1 .btn__content {
+  display: flex;
+  align-items: center;
+  padding: 4px 20px 4px 28px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--color-text);
+  background: #de8ca2;
+  transition: 1s;
+  border-radius: 100px;
+  box-shadow: 0 0 0.2em 0 var(--color-background);
+}
+
+.btn__1 .btn__content:hover,
+.btn__content:focus {
+  transition: 0.5s;
+  -webkit-animation: btn-content 1s;
+  animation: btn-content 1s;
+  outline: 0.1em solid transparent;
+  outline-offset: 0.2em;
+  box-shadow: 0 0 0.4em 0 var(--color-background);
+}
+
+.btn__1 .btn__content .icon__arrow {
+  transition: 0.5s;
+  margin-right: 0px;
+  transform: scale(0.6);
+}
+
+.btn__1 .btn__content:hover .icon__arrow {
+  transition: 0.5s;
+  margin-right: 25px;
+}
+
+.btn__1 .icon__arrow {
+  width: 20px;
+  margin-left: 15px;
+  position: relative;
+  top: 2px;
+  scale: 0.8;
+}
+
+/* SVG */
+.btn__1 #arrow__icon__one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+.btn__1 #arrow__icon__two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.btn__1 .btn__content:hover #arrow__icon__three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.btn__1 .btn__content:hover #arrow__icon__one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.btn__1 .btn__content:hover #arrow__icon__two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+
+  50% {
+    fill: var(--color-background);
+  }
+
+  100% {
+    fill: white;
+  }
+}
+
+/* Button animations */
+@-webkit-keyframes btn-content {
+  0% {
+    outline: 0.2em solid var(--color-background);
+    outline-offset: 0;
+  }
+}
+
+@keyframes btn-content {
+  0% {
+    outline: 0.2em solid var(--color-background);
+    outline-offset: 0;
+  }
+}
+/*  fin de btn__1  */
+
+/*    */
+.container__second {
+  margin-left: 5.5em;
+  display: flex;
+  width: 20em;
+  height: 20em;
+}
+
+/*    */
+.info_mes2 {
+  text-align: center;
+  margin-left: 3em;
+  margin-top: 3.5em;
+  font-size: 24px;
+}
+
+/* btn__2 */
+.btn__2 {
+  position: absolute;
+  margin-top: 9em;
+  margin-left: 56.5em;
+  scale: 0.8;
+  display: flex;
+  justify-content: center;
+  --color-text: #ffffff;
+  --color-background: #8f44fd;
+  --color-outline: #ff145b80;
+  --color-shadow: #00000080;
+}
+
+.btn__2 .btn__content {
+  display: flex;
+  align-items: center;
+  padding: 4px 20px 4px 28px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--color-text);
+  background: #de8ca2;
+  transition: 1s;
+  border-radius: 100px;
+  box-shadow: 0 0 0.2em 0 var(--color-background);
+}
+
+.btn__2 .btn__content:hover,
+.btn__content:focus {
+  transition: 0.5s;
+  -webkit-animation: btn-content 1s;
+  animation: btn-content 1s;
+  outline: 0.1em solid transparent;
+  outline-offset: 0.2em;
+  box-shadow: 0 0 0.4em 0 var(--color-background);
+}
+
+.btn__2 .btn__content .icon__arrow {
+  transition: 0.5s;
+  margin-right: 0px;
+  transform: scale(0.6);
+}
+
+.btn__2 .btn__content:hover .icon__arrow {
+  transition: 0.5s;
+  margin-right: 25px;
+}
+
+.btn__2 .icon__arrow {
+  width: 20px;
+  margin-left: 15px;
+  position: relative;
+  top: 2px;
+  scale: 0.8;
+}
+
+/* SVG */
+.btn__2 #arrow__icon__one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+.btn__2 #arrow__icon__two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.btn__2 .btn__content:hover #arrow__icon__three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.btn__2 .btn__content:hover #arrow__icon__one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.btn__2 .btn__content:hover #arrow__icon__two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+
+  50% {
+    fill: var(--color-background);
+  }
+
+  100% {
+    fill: white;
+  }
+}
+
+/* Button animations */
+@-webkit-keyframes btn-content {
+  0% {
+    outline: 0.2em solid var(--color-background);
+    outline-offset: 0;
+  }
+}
+
+@keyframes btn-content {
+  0% {
+    outline: 0.2em solid var(--color-background);
+    outline-offset: 0;
+  }
+}
+/*  fin de btn__2  */
